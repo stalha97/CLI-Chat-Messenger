@@ -44,13 +44,13 @@ Now we are gonna see things from different Viewpoints.
 
 ## How will both Users start the messenger in order to Talk?
 
-### User-1(Talha) Viewpoint
+#### User-1(Talha) Viewpoint
 1.	Talha starts the Client program in any PC on same wifi network of the "Server", he has to pass the IP of the PC where we started the Server in above step
     -	./client 192.168.1.7   
 2.	Talha(User-1) will be asked to enter his USERNAME
 3.  After Talha(User-1) enters his USERNAME
     -	The server will send a Unique ID to the Talha(User-1).
-### User-2(Hamza) Viewpoint
+#### User-2(Hamza) Viewpoint
 Hamza(User-2) who is on another terminal also performs the same steps (1,2,3) as Talha(User-1)
 
     1.  Step 1
@@ -59,19 +59,21 @@ Hamza(User-2) who is on another terminal also performs the same steps (1,2,3) as
         - Hamza(User-2) also gets a Unique ID from server
 
 ## How do both users connect to each other?
-Both users have started messenger but they can not send messages to each other because the server doesn't just allow any one to send messages to any one available on the server.
+-   Both users have started messenger but they can not send messages to each other because the server doesn't just allow any one to send messages to any one available on the server.
 
-Thats exactly what the UNIQUE-ID assigned to each user is for. The Users need to know UNIQUE-ID of friends in order to add them to his/her friend list and start chatting.
+-   Thats exactly what the UNIQUE-ID assigned to each user is for.
+    -   The Users need to know UNIQUE-ID of friends in order to add them to his/her friend list and start chatting.
 
--   Any one of the User(Suppose Talha(User-1)) needs to send his Unique-ID to his other friend Hamza(User-2) manually by any means. Forexample he sends the ID in a “SMS message”.
+-   Any one of the User(Suppose Talha(User-1)) needs to send his Unique-ID to his other friend Hamza(User-2) manually by any means.
+    -   Forexample he sends the ID in a “SMS message”.
 
-**Talha (User-1):**
+#### Talha (User-1):
 -   Types “./add Hamza's-Unique-ID”
     -	This will add Hamza(User-2) in Friend list of Talha
     -	This will also add Talha automatically in Hamza's(User-2) Friend List
         
 ## How do both users talk to each other?
-### Talha(User-1) Viewpoint
+#### Talha(User-1) Viewpoint
 -   Types “./list”
 -   It will show list of users(your added friends) available **+**  simple numerical IDs assigned to them
 -   As User-2 is named "Hamza" so the list will be displayed like:
@@ -85,11 +87,11 @@ Thats exactly what the UNIQUE-ID assigned to each user is for. The Users need to
 
 At this point you already know how to add friend, select friend and send messages to that friend, so basically you can add any other friend and start sending messages.
         
-### Hamza(User-2) Viewpoint
+#### Hamza(User-2) Viewpoint
 As Talha(User-1) has already added Hamza(User-2) to his friend list so Talha is also added automatically in Hamza's Friend List. Hamza will be able to receive messages from Talha as he already set his active connection to "Hamza" and started sending messages in above steps. Hamza can do the same as from above steps and start sending messages to Talha(User-1).
 
 # More about Server Commands
-**NOTE: In this Project , messages having “./” at start is used to send COMMANDS to Server**
+**NOTE: In this Project , messages having “./” at start is used to send COMMANDS to Server**<br/>
 We already saw few command like:
 -   ./add Hamza's-UNIQUE-ID
 -   ./list
