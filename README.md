@@ -25,34 +25,78 @@ As Server is the one who provides features and services to the Client. Besides p
 -	Exit – You can exit the program normally.
 
 # Working Principle
-**NOTE: In this Project , messages having “./” at start is used for Server Commands**
+## Server should be started ONCE
+The very first step should be starting the server. As server is the one that connects one user to another. How to start server?
+- Open 1 terminal
+- Type "./server" in the terminal and minimize it
+- Find the IP address of this PC using "ifconfig" (if in Linux) or any other suitable command.
+  - It will look something like "192.168.1.7"
+  - As this IP will be used by Clients to connect to this server
 
-1. There are 2 Programs:
-   - Server Program 
-   - Client Program
-2. Start the Server program in background:
-   -	./server
-3.	Start the Client program in any PC on same wifi network, you have to pass the IP
-    -	./client 192.168.1.7
-    -	Client(user-1) will be asked to enter USERNAME
-    -	Client(user-2) will be assigned a Unique ID by server.
-4.	User-2: 
-    -	Starts the client program the same way as step-3.
-    -	User-2 gets a Uniqued ID by server.
-    -	He sends his ID to his friend(user-1) manually by any means, suppose he sends the ID in a “SMS message”.
-5.	User-1:  
-    -	Types “./add User-2-Unique-ID”
-        -	This will add User 2 in your list
-        -	This will also add you automatically in User 2’s List
-    -	Types “./list”, it will show list of users available +  simple numerical IDs assigned to them
-        -	Like, 1 – Talha, 2 – Rafeeq, 3 – Hashim…….etc
-    -	Types “./active 3” 
-        -	This will set user 3 named “Hashim” as an active.
-        -	Now, anything you write besides “Server Commands( ./ at start)” will send messages to the active connection which is “Hashim” in this case. 
+## Open 1 terminal for User-1 and another terminal for User-2
+As clear from the heading, we need to open 1 terminal so User-1 can start Chatting with someone and similarly another terminal so User-2 can chat with some one. You can also open more than 2 terminals ( forexample 10 terminals to simulate 10 users) if you want to test for many users.<br/>
 
+Now we are gonna see things from different Viewpoints.
+- What should User-1 do? And how does he see things from his Viewpoint.
+- Similarly how does User-2 see things?
+- Suppose User-1 is named "Talha"
+- Suppose User-2 is named "Hamza"
+
+## How will both Users start the messenger in order to Talk?
+
+### User-1(Talha) Viewpoint
+1.	Talha starts the Client program in any PC on same wifi network of the "Server", he has to pass the IP of the PC where we started the Server in above step
+    -	./client 192.168.1.7   
+2.	Talha(User-1) will be asked to enter his USERNAME
+3.  After Talha(User-1) enters his USERNAME
+    -	The server will send a Unique ID to the Talha(User-1).
+### User-2(Hamza) Viewpoint
+Hamza(User-2) who is on another terminal also performs the same steps (1,2,3) as Talha(User-1)
+
+    1.  Step 1
+    2.  Step 2
+    3.  Step 3
+        - Hamza(User-2) also gets a Unique ID from server
+
+## How do both users connect to each other?
+Both users have started messenger but they can not send messages to each other because the server doesn't just allow any one to send messages to any one available on the server.
+
+Thats exactly what the UNIQUE-ID assigned to each user is for. The Users need to know UNIQUE-ID of friends in order to add them to his/her friend list and start chatting.
+
+-   Any one of the User(Suppose Talha(User-1)) needs to send his Unique-ID to his other friend Hamza(User-2) manually by any means. Forexample he sends the ID in a “SMS message”.
+
+**Talha (User-1):**
+-   Types “./add Hamza's-Unique-ID”
+    -	This will add Hamza(User-2) in Friend list of Talha
+    -	This will also add Talha automatically in Hamza's(User-2) Friend List
+        
+## How do both users talk to each other?
+### Talha(User-1) Viewpoint
+-   Types “./list”
+-   It will show list of users(your added friends) available **+**  simple numerical IDs assigned to them
+-   As User-2 is named "Hamza" so the list will be displayed like:
+    -   1 – Hamza
+-   Later when you add more friends , the list will display more names like:
+    -   1-Hamza , 2–Rafeeq, 3–Hashim
+-   **Using the Numbers assigned to the Names, you can Select the Friend you want to talk to and start sending messages**
+    -   Forexample, Talha can type “./active 1” in order to send messages to Hamza(USER-2) 
+        -	This will set  “Hamza” as an "Active Connection".
+        -	Now, anything Talha write will send messages to the active connection which is “Hamaa” in this case. 
+
+At this point you already know how to add friend, select friend and send messages to that friend, so basically you can add any other friend and start sending messages.
+        
+### Hamza(User-2) Viewpoint
+As Talha(User-1) has already added Hamza(User-2) to his friend list so Talha is also added automatically in Hamza's Friend List. Hamza will be able to receive messages from Talha as he already set his active connection to "Hamza" and started sending messages in above steps. Hamza can do the same as from above steps and start sending messages to Talha(User-1).
+
+# More about Server Commands
+**NOTE: In this Project , messages having “./” at start is used to send COMMANDS to Server**
+We already saw few command like:
+-   ./add Hamza's-UNIQUE-ID
+-   ./list
+-   ./active UaSER-ID-from-list
 ## EXTRA COMMANDS:
 1.	“./myID”  shows you your Unique-ID.
-2.	“./remove ID-From-List” will remove a connection from your list.
+2.	“./remove ID-From-List” will remove a connection from your list (Basically Unfriend him)
 3.	“./name New-Name” will change your current name to “New-Name”
 4.	“./help” shows you list of available Server Commands and how to use them. 
-5.	“./exit” will stop your Client Program Completely.
+5.	“./exit” will stop your Client Program Completely (Basically exit the messenger)
