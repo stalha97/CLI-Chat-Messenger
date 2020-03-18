@@ -83,12 +83,14 @@ Hamza(User-2) who is on another terminal also performs the same steps (1,2,3) as
 -   **Using the Numbers assigned to the Names, you can Select the Friend you want to talk to and start sending messages**
     -   Forexample, Talha can type “./active 1” in order to send messages to Hamza(USER-2) 
         -	This will set  “Hamza” as an "Active Connection".
-        -	Now, anything Talha write will send messages to the active connection which is “Hamaa” in this case. 
+        -	Now, anything Talha write will send messages to the active connection which is “Hamza” in this case. 
 
 At this point you already know how to add friend, select friend and send messages to that friend, so basically you can add any other friend and start sending messages.
         
 #### Hamza(User-2) Viewpoint
-As Talha(User-1) has already added Hamza(User-2) to his friend list so Talha is also added automatically in Hamza's Friend List. Hamza will be able to receive messages from Talha as he already set his active connection to "Hamza" and started sending messages in above steps. Hamza can do the same as from above steps and start sending messages to Talha(User-1).
+-   As Talha(User-1) has already added Hamza(User-2) to his friend list so Talha is also added automatically in Hamza's Friend List.
+-   Hamza will be able to receive messages from Talha as he already set his active connection to "Hamza" and started sending messages in above steps.
+-   Hamza can do the same as from above steps and start sending messages to Talha(User-1).
 
 # More about Server Commands
 **NOTE: In this Project , messages having “./” at start is used to send COMMANDS to Server**<br/>
