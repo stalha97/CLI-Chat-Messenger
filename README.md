@@ -1,7 +1,7 @@
 # CLI Chat Messenger
 This is CLI Chat Messenger based on POSIX API from Linux OS. Do note that unlike other similar named projects, this project works like a normal messenger e.g just as Facebook messenger would work. Except that it uses Command Line Interface (CLI) instead of a Graphical User Interface(GUI).
 
-# Major Programming Concepts used:
+## Major Programming Concepts Used
 -	Sockets
 -	Multi-Threading
 -	Object Oriented Programming
