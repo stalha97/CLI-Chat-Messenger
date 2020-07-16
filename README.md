@@ -1,9 +1,11 @@
-# Multi-Users-Chat-Messenger
-This is C++ based Chat Messenger which uses Client Server Architecture and Socket programming features of POSIX API from Linux OS. Compared to normal Messenger projects, this project allows for multiple users to connect to server and communicate with multiple users privately.
+# CLI Chat Messenger
+This is CLI Chat Messenger based on POSIX API from Linux OS. Do note that unlike other similar named projects, this project works like a normal messenger e.g just as Facebook messenger would work. Except that it uses Command Line Interface (CLI) instead of a Graphical User Interface(GUI).
 
-The implementation method for this project heavily relies on <br/>
-(1) **Sockets** - Connect one device to another device on network <br/>
-(2) **Multi-Threading** - For handling multiple users in parallel <br/>
+# Major Programming Concepts used:
+-	Sockets
+-	Multi-Threading
+-	Object Oriented Programming
+-	Queue Data Structure
 
 # Features
 ## Core Features:
