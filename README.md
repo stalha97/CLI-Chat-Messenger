@@ -21,7 +21,7 @@ This is CLI Chat Messenger based on POSIX API from Linux OS. Do note that unlike
 ***
 
 <p align="center">
-<img src="/readme_images/Server2.png" alt="alt text" width="100%" height="auto"></img>
+<img src="/readme_images/Server2a.png" alt="alt text" width="85%" height="auto"></img>
 </p>
 
 ***
