@@ -7,6 +7,25 @@ This is CLI Chat Messenger based on POSIX API from Linux OS. Do note that unlike
 -	Object Oriented Programming
 -	Queue Data Structure
 
+# How does it work?
+<p align="center">
+<img src="/readme_images/Users.png" alt="alt text" width="50%" height="auto" style="text-align:center"></img>
+</p>
+
+***
+
+<p align="center">
+<img src="/readme_images/Server.png" alt="alt text" width="60%" height="auto"></img>
+</p>
+
+***
+
+<p align="center">
+<img src="/readme_images/Server2.png" alt="alt text" width="100%" height="auto"></img>
+</p>
+
+***
+
 # Features
 ## Core Features:
 -	Point-to-Point Communication with another user over same network.
